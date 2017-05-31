@@ -133,7 +133,7 @@ class windows_timezone(
   exec { &quot;set the windows timezone&quot;:
     command =&gt; &quot;tzutil /s \&quot;${tz}\&quot;&quot;,
     unless  =&gt; &quot;findstr \&quot;${tz}\&quot;&quot;,
-    path    =&gt; &#39;c:\windows&#39;,
+    path    =&gt; &#39;c:\windows\system32&#39;,
   }
 }</pre>
       </td>
