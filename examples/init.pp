@@ -1,3 +1,3 @@
 class { "windows_timezone":
-  tz => "Pacific/Auckland",
+  tz => "New Zealand Standard Time",
 }

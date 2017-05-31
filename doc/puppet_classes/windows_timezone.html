@@ -95,6 +95,14 @@
         <em class="default">(defaults to: <tt>&quot;UTC&quot;</tt>)</em>
       
       
+        &mdash;
+        <div class='inline'>
+<p>The timezone to set this node to use. You must only the names allowed by
+the <code>tzutil -l</code> command. This has been captured on a Windows
+2012 VM for your convenience and can be found at /doc/windows_timezones.txt
+inside this module</p>
+</div>
+      
     </li>
   
 </ul>
@@ -114,18 +122,18 @@
         <pre class="lines">
 
 
-5
-6
-7
-8
-9
 10
 11
 12
-13</pre>
+13
+14
+15
+16
+17
+18</pre>
       </td>
       <td>
-        <pre class="code"><span class="info file"># File 'manifests/init.pp', line 5</span>
+        <pre class="code"><span class="info file"># File 'manifests/init.pp', line 10</span>
 
 class windows_timezone(
     $tz = &quot;UTC&quot;,
