@@ -10,9 +10,12 @@
 class windows_timezone(
     $tz = "UTC",
 ) {
+
+  # must invoke windows command shell directly if we want to use OS pipes, see
+  # https://projects.puppetlabs.com/issues/21656
   exec { "set the windows timezone":
     command => "tzutil /s \"${tz}\"",
-    unless  => "tzutil /g | findstr \"${tz}\"",
+    unless  => "cmd /C tzutil /g | findstr \"${tz}\"",
     path    => 'c:\windows\system32',
   }
 }

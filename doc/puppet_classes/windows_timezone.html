@@ -130,7 +130,10 @@ inside this module</p>
 15
 16
 17
-18</pre>
+18
+19
+20
+21</pre>
       </td>
       <td>
         <pre class="code"><span class="info file"># File 'manifests/init.pp', line 10</span>
@@ -138,9 +141,12 @@ inside this module</p>
 class windows_timezone(
     $tz = &quot;UTC&quot;,
 ) {
+
+  # must invoke windows command shell directly if we want to use OS pipes, see
+  # https://projects.puppetlabs.com/issues/21656
   exec { &quot;set the windows timezone&quot;:
     command =&gt; &quot;tzutil /s \&quot;${tz}\&quot;&quot;,
-    unless  =&gt; &quot;findstr \&quot;${tz}\&quot;&quot;,
+    unless  =&gt; &quot;cmd /C tzutil /g | findstr \&quot;${tz}\&quot;&quot;,
     path    =&gt; &#39;c:\windows\system32&#39;,
   }
 }</pre>
