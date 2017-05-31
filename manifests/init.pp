@@ -12,7 +12,7 @@ class windows_timezone(
 ) {
   exec { "set the windows timezone":
     command => "tzutil /s \"${tz}\"",
-    unless  => "findstr \"${tz}\"",
+    unless  => "tzutil /g | findstr \"${tz}\"",
     path    => 'c:\windows\system32',
   }
 }
