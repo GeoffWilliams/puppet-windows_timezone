@@ -15,11 +15,11 @@ class windows_timezone(
   # must invoke windows command shell directly if we want to use OS pipes, see
   # https://projects.puppetlabs.com/issues/21656
   # 
-  # tzutil sets the SYSTEM timezone for all users at once. Must use /X to 
+  # tzutil sets the SYSTEM timezone for all users at once. Must use /C to 
   # fully match input otherwise the exec will not fire correctly
   exec { "set the windows timezone":
     command => "tzutil /s \"${tz}\"",
-    unless  => "cmd /C tzutil /g | findstr /X \"${tz}\"",
+    unless  => "cmd /C tzutil /g | findstr /C:\"${tz}\"",
     path    => 'c:\windows\system32',
   }
 }
