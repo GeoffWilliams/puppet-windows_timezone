@@ -1,6 +1,6 @@
 {
   "name": "geoffwilliams-windows_timezone",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "author": "geoffwilliams",
   "summary": "Set the Windows timezone using Puppet",
   "license": "Apache-2.0",
