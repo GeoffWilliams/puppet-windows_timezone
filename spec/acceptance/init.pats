@@ -1,0 +1,3 @@
+@test "sets the timezone correctly" {
+  cmd /C "tzutil /g | findstr /C:`"New Zealand Standard Time`" "
+}

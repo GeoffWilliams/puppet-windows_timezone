@@ -5,14 +5,22 @@
   "summary": "Set the Windows timezone using Puppet",
   "license": "Apache-2.0",
   "source": "https://github.com/GeoffWilliams/puppet-windows_timezone.git",
-  "project_page": null,
+  "project_page": "https://github.com/GeoffWilliams/puppet-windows_timezone",
   "issues_url": "https://api.github.com/repos/GeoffWilliams/puppet-windows_timezone/issues{/number}",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 1.0.0"
+      "version_requirement": "5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "windows"
     }
   ],
   "data_provider": null,
-  "project_url": "https://github.com/GeoffWilliams/puppet-windows_timezone.git"
+  "project_url": "https://github.com/GeoffWilliams/puppet-windows_timezone.git",
+  "pdk-version": "1.7.0",
+  "template-url": "file://C:/Program Files/Puppet Labs/DevelopmentKit/share/cache/pdk-templates.git",
+  "template-ref": "1.7.0-0-g57412ed"
 }
