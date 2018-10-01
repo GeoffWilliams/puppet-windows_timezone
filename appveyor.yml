@@ -14,6 +14,6 @@ install:
 
 build_script:
   - "gem install bundler"
-  - "ps: ./make.ps1 pdqtest bundle"
-  - "ps: ./make.ps1 setup"
-  - "ps: ./make.ps1 all"
+  - ps: ./make.ps1 pdqtest bundle
+  - ps: ./make.ps1 setup
+  - ps: ./make.ps1 all
