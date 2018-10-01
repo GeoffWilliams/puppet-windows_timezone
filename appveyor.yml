@@ -8,13 +8,12 @@ install:
   - "cinst ruby --version 2.4.3.1"
   - "cinst pdk"
   - set PATH=C:\tools\ruby24\bin;%PATH%
-
-build_script:
-#  - "choco install -y ruby --version 2.4.3.1"
+  - "gem install bundler"
   - "ruby --version"
   - "gem --version"
-#  - "choco install -y pdk"
+
+build_script:
   - "gem install bundler"
-  - "./make.ps1 pdqtest bundle"
-  - "./make.ps1 setup"
-  - "./make.ps1 all"
+  - "ps: ./make.ps1 pdqtest bundle"
+  - "ps: ./make.ps1 setup"
+  - "ps: ./make.ps1 all"
