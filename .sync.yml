@@ -4,3 +4,13 @@
 ".gitignore":
   paths:
   - ".Puppetfile.pdqtest"
+  - refresh.ps1
+bitbucket-pipelines.yml:
+  unmanaged: true
+".gitattributes":
+  include:
+  - "*.epp eol=lf"
+  - "*.json eol=lf"
+  - "*.yaml eol=lf"
+  - "*.yml eol=lf"
+  - "*.md eol=lf"
