@@ -16,4 +16,4 @@ build_script:
 
 test_script:
   - ps: ./make.ps1 pdqtestbundle
-  - cd .pdqtest ; bundle exec pdqtest --inplace --inplace-enable all
+  - cd .pdqtest && bundle exec pdqtest --inplace --inplace-enable all
