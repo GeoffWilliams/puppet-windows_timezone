@@ -2,8 +2,8 @@
 ---
 image: "Visual Studio 2017"
 build_script:
-  - "choco install ruby --version 2.4.3.1"
-  - "choco install pdk"
+  - "choco install -y ruby --version 2.4.3.1"
+  - "choco install -y pdk"
   - "gem install bundler"
   - "./make.ps1 pdqtest bundle"
   - "./make.ps1 setup"
