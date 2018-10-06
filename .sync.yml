@@ -14,3 +14,5 @@ bitbucket-pipelines.yml:
   - "*.yaml eol=lf"
   - "*.yml eol=lf"
   - "*.md eol=lf"
+appveyor.yml:
+  unmanaged: true
